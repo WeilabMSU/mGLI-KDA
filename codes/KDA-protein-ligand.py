@@ -311,7 +311,7 @@ def get_kda_feature_p(e1, e2, r1, r2, protein_struct, ligand_struct, F, args):
             for bonded_atom2 in ligand_struct:
                 if bonded_atom2.atom.etype == e2:
                     dist = math.dist(bonded_atom1.atom.data, bonded_atom2.atom.data)
-                    if args.interval_or_all == "interval":
+                    if args.interval_or_all == "bin":
                         if dist >= r1 and dist < r2:
                             gli_sum += F.result[
                                 bonded_atom1.atom.serial_id, bonded_atom2.atom.serial_id
@@ -349,7 +349,7 @@ def get_kda_feature_l(e1, e2, r1, r2, protein_struct, ligand_struct, F, args):
             for bonded_atom1 in protein_struct:
                 if bonded_atom1.atom.etype == e1:
                     dist = math.dist(bonded_atom1.atom.data, bonded_atom2.atom.data)
-                    if args.interval_or_all == "interval":
+                    if args.interval_or_all == "bin":
                         if dist >= r1 and dist < r2:
                             gli_sum += F.result[
                                 bonded_atom1.atom.serial_id, bonded_atom2.atom.serial_id
@@ -411,9 +411,7 @@ def main():
     parser = argparse.ArgumentParser(description="Get KDA features for pdbbind")
     parser.add_argument("--pdb_path", type=str, default="datasets/PDBbind")
     parser.add_argument("--pdbid", type=str, default="2eg8")
-    parser.add_argument(
-        "--interval_or_all", type=str, default="interval", help="interval or all"
-    )
+    parser.add_argument("--bin_or_all", type=str, default="bin", help="bin or all")
     parser.add_argument(
         "--integral_type", type=str, default="median", help="median or std"
     )
