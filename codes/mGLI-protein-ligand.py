@@ -311,12 +311,12 @@ def get_kda_feature_p(e1, e2, r1, r2, protein_struct, ligand_struct, F, args):
             for bonded_atom2 in ligand_struct:
                 if bonded_atom2.atom.etype == e2:
                     dist = math.dist(bonded_atom1.atom.data, bonded_atom2.atom.data)
-                    if args.interval_or_all == "bin":
+                    if args.bin_or_all == "bin":
                         if dist >= r1 and dist < r2:
                             gli_sum += F.result[
                                 bonded_atom1.atom.serial_id, bonded_atom2.atom.serial_id
                             ]
-                    elif args.interval_or_all == "all":
+                    elif args.bin_or_all == "all":
                         if dist < r2:
                             gli_sum += F.result[
                                 bonded_atom1.atom.serial_id, bonded_atom2.atom.serial_id
@@ -349,12 +349,12 @@ def get_kda_feature_l(e1, e2, r1, r2, protein_struct, ligand_struct, F, args):
             for bonded_atom1 in protein_struct:
                 if bonded_atom1.atom.etype == e1:
                     dist = math.dist(bonded_atom1.atom.data, bonded_atom2.atom.data)
-                    if args.interval_or_all == "bin":
+                    if args.bin_or_all == "bin":
                         if dist >= r1 and dist < r2:
                             gli_sum += F.result[
                                 bonded_atom1.atom.serial_id, bonded_atom2.atom.serial_id
                             ]
-                    elif args.interval_or_all == "all":
+                    elif args.bin_or_all == "all":
                         if dist < r2:
                             gli_sum += F.result[
                                 bonded_atom1.atom.serial_id, bonded_atom2.atom.serial_id
@@ -420,9 +420,7 @@ def main():
     kda_feature = get_KDA_features(args, args.pdbid)
 
     print(np.shape(kda_feature))
-    np.save(
-        f"{args.pdbid}-complex-{args.integral_type}-{args.interval_or_all}", kda_feature
-    )
+    np.save(f"{args.pdbid}-complex-{args.integral_type}-{args.bin_or_all}", kda_feature)
 
 
 if __name__ == "__main__":

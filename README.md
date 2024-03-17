@@ -96,9 +96,9 @@ A brief introduction about the benchmarks.
 
 
 
-- PDBbind RowData: the protein-ligand complex structures. Download from PDBbind database [Download](http://www.pdbbind.org.cn/)
+- PDBbind RawData: the protein-ligand complex structures. Download from PDBbind database [Download](http://www.pdbbind.org.cn/)
 - Label: the .csv file, which contains the protein ID and corresponding binding affinity for PDBbind data.
-- Data: molecular 3D structures, SMILES string, and labels
+- Data: molecular 3D structures, SMILES strings, and labels
 ---
 ## mGLI-based B-factor prediction
 
