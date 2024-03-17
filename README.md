@@ -111,7 +111,7 @@ python codes/GLI.py --dataset_name Set-364
 ## Generation of mGLI-based features for protein-ligand complex
 
 ```shell
-# examples, generating mGLI features with "bin" manner and "median" statistics for atom-by-atom Gauss linking integral
+# example with PDB 2eg8, generating mGLI features with "bin" manner and "median" statistics for atom-by-atom Gauss linking integral
 # "all" can also be used and "std" statistics is also available for atom-by-atom Gauss linking integral
 python codes/KDA-protein-ligand.py --pdbid 2eg8 --bin_or_all bin --integral_type median
 ```
