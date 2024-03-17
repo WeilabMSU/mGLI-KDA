@@ -85,27 +85,23 @@ A brief introduction about the benchmarks.
 | PDBbind-v2007       |1300 |1105  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                        | 195 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                         |
 | PDBbind-v2013       |2959|2764  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                        | 195 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                         |
 | PDBbind-v2016       |4057|3767  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                        | 290 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                         |
-| IGC50       |1792|1434  [Label](https://weilab.math.msu.edu/Downloads/toxicity_data.zip)                        | 358 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/toxicity_data.zip)                         |
-| LC50       |823|659  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/toxicity_data.zip)                        | 164 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/toxicity_data.zip)                         |
-| LC50DM       |353|283  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/toxicity_data.zip)                        | 70 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/toxicity_data.zip)      
-| LD50       |7413|5931  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/toxicity_data.zip)                        | 1482 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/toxicity_data.zip)                         |
-| Zhang data       |1334|927  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/hERG-data.zip)                        | 407 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/hERG-data.zip)                         |
-| Li data       |4813|3721  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/hERG-data.zip)                        | 1092 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/hERG-data.zip)                         |
-| Cai data       |4447|3954  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/hERG-data.zip)                        | 493 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/hERG-data.zip)                         |
+| IGC50       |1792 [Data](https://weilab.math.msu.edu/Downloads/toxicity_data.zip)|1434                          | 358 |
+| LC50       |823 [Data](https://weilab.math.msu.edu/Downloads/toxicity_data.zip)|659 
+| LC50DM       |353[Data](https://weilab.math.msu.edu/Downloads/mGLI-KDA/toxicity_data.zip)|283                          | 70 
+| LD50       |7413 [Data](https://weilab.math.msu.edu/Downloads/mGLI-KDA/toxicity_data.zip)                        |5931  | 1482 
+| Zhang data       |1334[Data](https://weilab.math.msu.edu/Downloads/mGLI-KDA/hERG-data.zip)|927                          | 407 
+| Li data       |4813[Data](https://weilab.math.msu.edu/Downloads/mGLI-KDA/hERG-data.zip)|3721                          | 1092 
+| Cai data       |4447[Data](https://weilab.math.msu.edu/Downloads/mGLI-KDA/hERG-data.zip)|3954                          | 493 
 
 
 
-- RowData: the protein-ligand complex structures. From PDBbind
-- TopoFeature: the topological embedded features for the protein-ligand complex. All features are saved in a dict, which `key` is the protein ID, and `value` is the topological embedded features for corresponding complex. The downloaded file is .zip file, which contains two file (1) `TopoFeature_large.npy`: topological embedded features with a filtration parameter ranging from 0 to 10 and incremented in steps of 0.1 \AA; (2) `TopoFeature_small.npy`: topological embedded features with a filtration parameter ranging from 2 to 12 and incremented in steps of 0.2 \AA; 
-- Label: the .csv file, which contains the protein ID and corresponding binding affinity.
-
+- PDBbind RowData: the protein-ligand complex structures. Download from PDBbind database [Download](http://www.pdbbind.org.cn/)
+- Label: the .csv file, which contains the protein ID and corresponding binding affinity for PDBbind data.
+- Data: molecular 3D structures, SMILES string, and labels
 ---
-## Preparing Topologial Sequence
+## B-factor features generation
 
 ```shell
-# get the usage
-python ./code_pkg/main_potein_ligand_topo_embedding.py -h
-
 # examples
 python ./code_pkg/main_potein_ligand_topo_embedding.py --output_feature_folder "../examples/output_topo_seq_feature_result" --protein_file "../examples/protein_ligand_complex/1a1e/1a1e_pocket.pdb" --ligand_file "../examples/protein_ligand_complex/1a1e/1a1e_ligand.mol2" --dis_start 0 --dis_cutoff 5 --consider_field 20
 ```
