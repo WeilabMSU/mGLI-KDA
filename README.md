@@ -102,8 +102,8 @@ A brief introduction about the benchmarks.
 ## B-factor features generation
 
 ```shell
-# examples
-python ./code_pkg/main_potein_ligand_topo_embedding.py --output_feature_folder "../examples/output_topo_seq_feature_result" --protein_file "../examples/protein_ligand_complex/1a1e/1a1e_pocket.pdb" --ligand_file "../examples/protein_ligand_complex/1a1e/1a1e_ligand.mol2" --dis_start 0 --dis_cutoff 5 --consider_field 20
+# examples, dataset_name options: Set-364, largeset, mediumset, smallset
+python codes/GLI.py --dataset_name Set-364 
 ```
 
 
