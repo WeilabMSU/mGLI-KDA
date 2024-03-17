@@ -99,7 +99,7 @@ A brief introduction about the benchmarks.
 - Label: the .csv file, which contains the protein ID and corresponding binding affinity for PDBbind data.
 - Data: molecular 3D structures, SMILES string, and labels
 ---
-## B-factor features generation
+## mGLI-based B-factor prediction
 
 ```shell
 # examples, dataset_name options: Set-364, largeset, mediumset, smallset
