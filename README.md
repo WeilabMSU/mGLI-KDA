@@ -116,6 +116,15 @@ python codes/mGLI-B-factor.py --dataset_name Set-364
 python codes/mGLI-protein-ligand.py --pdbid 2eg8 --bin_or_all bin --integral_type median
 ```
 
+## Generation of mGLI-based features for small molecule
+
+```shell
+# example with the ligand in PDB 2eg8, generating mGLI features with "bin" manner and "median" statistics for atom-by-atom Gauss linking integral
+# "all" can also be used.
+python codes/mGLI-ligand.py --mol2_path datasets/PDBbind/2eg8/2eg8_ligand.mol2 --mol2_id 2eg8 --bin_or_all bin --integral_type median
+# output: 2eg8-ligand-median-bin.npy
+```
+
 ---
 
 ## Results

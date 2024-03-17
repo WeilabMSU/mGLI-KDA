@@ -220,11 +220,9 @@ def get_kda_feature_l(e1, e2, r1, r2, protein_struct, ligand_struct, F, args):
     return kda_feature
 
 
-def get_KDA_features(args, mol2_id):
+def get_KDA_features(args, mol2_path):
 
-    mol2file = "%s/%s/%s_ligand.mol2" % (args.mol2_path, mol2_id, mol2_id)
-
-    ligand_struct = get_ligand_struct_from_mol2(mol2file)
+    ligand_struct = get_ligand_struct_from_mol2(mol2_path)
     F = Gauss_linking_integral_of_structures(
         ligand_struct, ligand_struct, args.integral_type
     )
@@ -256,13 +254,13 @@ def get_KDA_features(args, mol2_id):
 
 def main():
     parser = argparse.ArgumentParser(description="Get KDA features for pdbbind")
-    parser.add_argument("--mol2_path", type=str, default="datasets/PDBbind")
-    parser.add_argument("--mol2_id", type=str, default="2eg8")
+    parser.add_argument("--mol2_path", type=str)
+    parser.add_argument("--mol2_id", type=str)
     parser.add_argument("--bin_or_all", type=str, default="bin", help="bin or all")
     parser.add_argument("--integral_type", type=str, default="median")
     args = parser.parse_args()
 
-    kda_feature = get_KDA_features(args, args.mol2_id)
+    kda_feature = get_KDA_features(args, args.mol2_path)
 
     print(np.shape(kda_feature))
     np.save(
