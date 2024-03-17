@@ -109,63 +109,42 @@ python codes/mGLI-B-factor.py --dataset_name Set-364
 
 
 ## Generation of mGLI-based features for protein-ligand complex
-
+Example with PDB 2eg8, generating mGLI features with "bin" manner and "median" statistics for atom-by-atom Gauss linking integral
+"all" can also be used and "std" statistics is also available for atom-by-atom Gauss linking integral, output: 2eg8-complex-median-bin.npy
+p
 ```shell
-# example with PDB 2eg8, generating mGLI features with "bin" manner and "median" statistics for atom-by-atom Gauss linking integral
-# "all" can also be used and "std" statistics is also available for atom-by-atom Gauss linking integral
-python codes/mGLI-protein-ligand.py --pdbid 2eg8 --bin_or_all bin --integral_type median
-# output: 2eg8-complex-median-bin.npy
+ython codes/mGLI-protein-ligand.py --pdbid 2eg8 --bin_or_all bin --integral_type median
 ```
 
 ## Generation of mGLI-based features for small molecule
-
+example with the ligand in PDB 2eg8, generating mGLI features with "bin" manner and "median" statistics for atom-by-atom Gauss linking integral
+"all" can also be used,  output: 2eg8-ligand-median-bin.npy
 ```shell
-# example with the ligand in PDB 2eg8, generating mGLI features with "bin" manner and "median" statistics for atom-by-atom Gauss linking integral
-# "all" can also be used.
 python codes/mGLI-ligand.py --mol2_path datasets/PDBbind/2eg8/2eg8_ligand.mol2 --mol2_id 2eg8 --bin_or_all bin --integral_type median
-# output: 2eg8-ligand-median-bin.npy
+
 ```
 
 ---
 
 ## Results
 
-#### Pretrained models
-- Pretrained TopoFormer model large. [Download](https://weilab.math.msu.edu/Downloads/mGLI-KDA/TopoFormer_s_pretrained_model.zip)
-- Pretrained TopoFormer model small. [Download](https://weilab.math.msu.edu/Downloads/mGLI-KDA/TopoFormer_pretrained_model.zip)
+#### Modeling with mGLI-all & mGLI-lig-all features
 
-#### Finetuned models and performances
-- Scoring
-
-
-| Finetuned for scoring                                                | Training Set                  | Test Set| PCC | RMSE (kcal/mol) |
+|Datasets                                        | Training Set                  | Test Set| PCC | RMSE (kcal/mol) |
 |-------------------------------------------------                     |-------------                  |---------|-    |-                |
-| CASF-2007 [result](./Results)      | 1105                          | 195     |0.837|1.807|
-| CASF-2007 small [result](./Results)| 1105                          | 195     |0.839|1.807|
-| CASF-2013 [result](./Results)      | 2764                          | 195     |0.816|1.859|
-| CASF-2016 [result](./Results)      | 3772                          | 285     |0.864|1.568|
-| PDB v2016 [result](./Results)      | 3767                          | 290     |0.866|1.561|
-| PDB v2020 [result](./Results)      | 18904 <br> (exclude core sets)|195<br>CASF-2007 core set|0.853|1.295|
-|                                    |                               |195<br>CASF-2013 core set|0.832|1.301|
-|                                    |                               |285<br>CASF-2016 core set|0.881|1.095|
-
-Note, there are 20 TopoFormers are trained for each dataset with distinct random seeds to address initialization-related errors. And 20 gradient boosting regressor tree (GBRT) models are subsequently trained one these sequence-based features, which predictions can be found in the [results](./Results) folder. Then, 10 models were randomly selected from TopoFormer and GBDT models, respectively, the consensus predictions of these models was used as the final prediction result. The performance shown in the table is the average result of this process performed 400 times.
-
-- Docking
+| PDBbind-v2007 [result](./Results)      |1300 |1105  | 195 |0.866|1.561|
+| PDBbind-v2013 [result](./Results)      |2959|2764  | 195 |0.866|1.561|
+| PDBbind-v2016 [result](./Results)      |4057|3767  | 290 |0.866|1.561|
+|-------------------------------------------------                     |-------------                  |---------|-    |-                |
+|Datasets                                     | Training Set                  | Test Set| PCC | RMSE (kcal/mol) |
+| PDBbind-v2007 [result](./Results)      |1300 |1105  | 195 |0.866|1.561|
+| PDBbind-v2013 [result](./Results)      |2959|2764  | 195 |0.866|1.561|
+| PDBbind-v2016 [result](./Results)      |4057|3767  | 290 |0.866|1.561|
 
 
-| Finetuned for docking                                                | Success rate |
-|-------------------------------------------------                     |-             |
-| CASF-2007 [result](./Results)| 93.3%         |
-| CASF-2013 [result](./Results)| 91.3%         |
+Note, twenty gradient boosting regressor tree (GBRT) models were built for each dataset with distinct random seeds such that initialization-related errors can be addressed. The mGLI-based features and transformer-based features were paired with GBRT, respectively. The consensus predictions were obtained using predictions from the two types of models. The predictions can be found in the [results](./Results) folder. 
 
-- Screening
-
-| Finetuned for screening                                              |Success rate on 1%|Success rate on 5%|Success rate on 10%|EF on 1%|EF on 5%|EF on 10%|
-|-                                                                     | - | - | - | - | - | - |
-| CASF-2013 |68%|81.5%|87.8%|29.6|9.7|5.6|
-
-Note, the EF here means the enhancement factor. Each target protein has a finetuned model. [result](./Results) contains all predictions.
+ the consensus predictions of these models was used as the final prediction result. The performance shown in the table is the average result of this process performed 400 times.
 
 ---
 
