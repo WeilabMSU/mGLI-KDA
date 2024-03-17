@@ -130,15 +130,17 @@ python codes/mGLI-ligand.py --mol2_path datasets/PDBbind/2eg8/2eg8_ligand.mol2 -
 #### Modeling with mGLI-all & mGLI-lig-all features
 
 |Datasets                                        | Training Set                  | Test Set| PCC | RMSE (kcal/mol) |
-|-------------------------------------------------                     |-------------                  |---------|-    |-                |
+|-------------------------------------------------|-------------                  |---------|-    |-                |
 | PDBbind-v2007 [result](./Results)      |1300 |1105  | 195 |0.866|1.561|
 | PDBbind-v2013 [result](./Results)      |2959|2764  | 195 |0.866|1.561|
 | PDBbind-v2016 [result](./Results)      |4057|3767  | 290 |0.866|1.561|
-|-------------------------------------------------                     |-------------                  |---------|-    |-                |
+|-------------------------------------------------|-------------                  |---------|-    |-                |
 |Datasets                                     | Training Set                  | Test Set| PCC | RMSE (kcal/mol) |
+|-------------------------------------------------|-------------                  |---------|-    |-                |
 | PDBbind-v2007 [result](./Results)      |1300 |1105  | 195 |0.866|1.561|
 | PDBbind-v2013 [result](./Results)      |2959|2764  | 195 |0.866|1.561|
 | PDBbind-v2016 [result](./Results)      |4057|3767  | 290 |0.866|1.561|
+
 
 
 Note, twenty gradient boosting regressor tree (GBRT) models were built for each dataset with distinct random seeds such that initialization-related errors can be addressed. The mGLI-based features and transformer-based features were paired with GBRT, respectively. The consensus predictions were obtained using predictions from the two types of models. The predictions can be found in the [results](./Results) folder. 
