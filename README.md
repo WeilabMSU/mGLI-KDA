@@ -46,7 +46,7 @@ In the past decade, topological data analysis (TDA) has emerged as a powerful al
 
 Schematic illustration of the overall mGLI-based knot data analysis (KDA) platform is shown in below.
 
-![Model Architecture](concepts.pdf)
+![Model Architecture](concepts.png)
 
 Further explain the details in the [paper](https://github.com/WeilabMSU/mGLI-KDA), providing context and additional information about the architecture and its components.
 
