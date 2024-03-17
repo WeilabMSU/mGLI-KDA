@@ -109,7 +109,7 @@ python codes/mGLI-B-factor.py --dataset_name Set-364
 
 
 ## Generation of mGLI-based features for protein-ligand complex
-Example with PDB 2eg8, generating mGLI features with "bin" manner and "median" statistics for atom-by-atom Gauss linking integral
+Example with PDB 2eg8, generating mGLI features with "bin" manner and "median" statistics for atom-by-atom Gauss linking integral.
 "all" can also be used and "std" statistics is also available for atom-by-atom Gauss linking integral, output: 2eg8-complex-median-bin.npy
 p
 ```shell
@@ -117,7 +117,7 @@ python codes/mGLI-protein-ligand.py --pdbid 2eg8 --bin_or_all bin --integral_typ
 ```
 
 ## Generation of mGLI-based features for small molecule
-Example with the ligand in PDB 2eg8, generating mGLI features with "bin" manner and "median" statistics for atom-by-atom Gauss linking integral
+Example with the ligand in PDB 2eg8, generating mGLI features with "bin" manner and "median" statistics for atom-by-atom Gauss linking integral.
 "all" can also be used,  output: 2eg8-ligand-median-bin.npy
 ```shell
 python codes/mGLI-ligand.py --mol2_path datasets/PDBbind/2eg8/2eg8_ligand.mol2 --mol2_id 2eg8 --bin_or_all bin --integral_type median
