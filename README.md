@@ -63,6 +63,7 @@ Further explain the details in the [paper](https://github.com/WeilabMSU/mGLI-KDA
 - torchvision               0.11.1
 - scikit-learn              1.0.2
 - python                    3.10.12
+- biopandas                 0.4.1
 
 ### Installation
 
@@ -110,42 +111,8 @@ python codes/GLI.py --dataset_name Set-364
 ## Fine-Tuning Procedure for Customized Data
 
 ```shell
-bs=32 # batch size
-lr=0.00008  # learning rate
-ms=10000  # max training steps
-fintuning_python_script=./code_pkg/topt_regression_finetuning.py
-model_output_dir=./outmodel_finetune_for_regression
-mkdir $model_output_dir
-pretrained_model_dir=./pretrained_model
-scaler_path=./code_pkg/pretrain_data_standard_minmax_6channel_large.sav
-validation_data_path=./CASF_2016_valid_feat.npy
-train_data_path=./CASF_2016_train_feat.npy
-validation_label_path=./CASF2016_core_test_label.csv
-train_label_path=./CASF2016_refine_train_label.csv
 
-# finetune for regression on one GPU
-CUDA_VISIBLE_DEVICES=1 python $fintuning_python_script --hidden_dropout_prob 0.1 --attention_probs_dropout_prob 0.1 --num_train_epochs 100 --max_steps $ms --per_device_train_batch_size $bs --base_learning_rate $lr --output_dir $model_output_dir --model_name_or_path $pretrained_model_dir --scaler_path $scaler_path --validation_data $validation_data_path --train_data $train_data_path --validation_label $validation_label_path --train_label $train_label_path --pooler_type cls_token --random_seed 1234 --seed 1234;
 ```
-
-
-```shell
-# script for no validation data and validation label
-# docking and screening
-bs=32 # batch size
-lr=0.0001  # learning rate
-ms=5000  # max training steps
-fintuning_python_script=./code_pkg/topt_regression_finetuning_docking.py
-model_output_dir=./outmodel_finetune_for_docking
-mkdir $model_output_dir
-pretrained_model_dir=./pretrained_model
-scaler_path=./code_pkg/pretrain_data_standard_minmax_6channel_filtration50-12.sav
-train_data_path=./train_feat.npy
-train_label_path=./train_label.csv
-
-# finetune for regression on one GPU
-CUDA_VISIBLE_DEVICES=1 python $fintuning_python_script --hidden_dropout_prob 0.1 --attention_probs_dropout_prob 0.1 --num_train_epochs 100 --max_steps $ms --per_device_train_batch_size $bs --base_learning_rate $lr --output_dir $model_output_dir --model_name_or_path $pretrained_model_dir --scaler_path /$scaler_path --train_data $train_data_path --train_label $train_label_path --validation_data None --validation_label None --train_val_split 0.1 --pooler_type cls_token --random_seed 1234 --seed 1234 --specify_loss_fct 'huber';
-```
-
 
 ---
 
@@ -198,8 +165,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Citation
 
-If you use this code or the pre-trained models in your work, please cite our work. 
-- Chen, Dong, Jian Liu, and Guo-Wei Wei. "TopoFormer: Multiscale Topology-enabled Structure-to-Sequence Transformer for Protein-Ligand Interaction Predictions."
+- Li Shen, Hongsong Feng, Fengling Li, Fengchun Lei, Jie Wu, and Guo-Wei Wei, "Knot data analysis using multiscale Gauss link integral"
 
 ---
 
