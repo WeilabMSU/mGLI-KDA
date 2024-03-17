@@ -82,16 +82,16 @@ A brief introduction about the benchmarks.
 | B-factor (small) | 30       |   -    |      -                                                            |
 | B-factor (medium) | 36       |   -    |      -                                                            |
 | B-factor (large) | 34       |   -    |      -                                                            |
-| PDBbind-v2007       |1300 |1105  [Label](https://weilab.math.msu.edu/Downloads/TopoFormer/Benchmarks_labels.zip)                        | 195 [Label](https://weilab.math.msu.edu/Downloads/TopoFormer/Benchmarks_labels.zip)                         |
-| PDBbind-v2013       |2959|2764  [Label](https://weilab.math.msu.edu/Downloads/TopoFormer/Benchmarks_labels.zip)                        | 195 [Label](https://weilab.math.msu.edu/Downloads/TopoFormer/Benchmarks_labels.zip)                         |
-| PDBbind-v2016       |4057|3767  [Label](https://weilab.math.msu.edu/Downloads/TopoFormer/Benchmarks_labels.zip)                        | 290 [Label](https://weilab.math.msu.edu/Downloads/TopoFormer/Benchmarks_labels.zip)                         |
-| IGC50       |1792|1434  [Label](https://weilab.math.msu.edu/Downloads/TopoFormer/Benchmarks_labels.zip)                        | 358 [Label](https://weilab.math.msu.edu/Downloads/TopoFormer/Benchmarks_labels.zip)                         |
-| LC50       |823|659  [Label](https://weilab.math.msu.edu/Downloads/TopoFormer/Benchmarks_labels.zip)                        | 164 [Label](https://weilab.math.msu.edu/Downloads/TopoFormer/Benchmarks_labels.zip)                         |
-| LC50DM       |353|283  [Label](https://weilab.math.msu.edu/Downloads/TopoFormer/Benchmarks_labels.zip)                        | 70 [Label](https://weilab.math.msu.edu/Downloads/TopoFormer/Benchmarks_labels.zip)                         |
-| LD50       |7413|5931  [Label](https://weilab.math.msu.edu/Downloads/TopoFormer/Benchmarks_labels.zip)                        | 1482 [Label](https://weilab.math.msu.edu/Downloads/TopoFormer/Benchmarks_labels.zip)                         |
-| Zhang data       |1334|927  [Label](https://weilab.math.msu.edu/Downloads/TopoFormer/Benchmarks_labels.zip)                        | 407 [Label](https://weilab.math.msu.edu/Downloads/TopoFormer/Benchmarks_labels.zip)                         |
-| Li data       |4813|3721  [Label](https://weilab.math.msu.edu/Downloads/TopoFormer/Benchmarks_labels.zip)                        | 1092 [Label](https://weilab.math.msu.edu/Downloads/TopoFormer/Benchmarks_labels.zip)                         |
-| Cai data       |4447|3954  [Label](https://weilab.math.msu.edu/Downloads/TopoFormer/Benchmarks_labels.zip)                        | 493 [Label](https://weilab.math.msu.edu/Downloads/TopoFormer/Benchmarks_labels.zip)                         |
+| PDBbind-v2007       |1300 |1105  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                        | 195 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                         |
+| PDBbind-v2013       |2959|2764  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                        | 195 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                         |
+| PDBbind-v2016       |4057|3767  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                        | 290 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                         |
+| IGC50       |1792|1434  [Label](https://weilab.math.msu.edu/Downloads/toxicity_data.zip)                        | 358 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/toxicity_data.zip)                         |
+| LC50       |823|659  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/toxicity_data.zip)                        | 164 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/toxicity_data.zip)                         |
+| LC50DM       |353|283  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/toxicity_data.zip)                        | 70 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/toxicity_data.zip)      
+| LD50       |7413|5931  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/toxicity_data.zip)                        | 1482 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/toxicity_data.zip)                         |
+| Zhang data       |1334|927  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/hERG-data.zip)                        | 407 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/hERG-data.zip)                         |
+| Li data       |4813|3721  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/hERG-data.zip)                        | 1092 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/hERG-data.zip)                         |
+| Cai data       |4447|3954  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/hERG-data.zip)                        | 493 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/hERG-data.zip)                         |
 
 
 
@@ -156,8 +156,8 @@ CUDA_VISIBLE_DEVICES=1 python $fintuning_python_script --hidden_dropout_prob 0.1
 ## Results
 
 #### Pretrained models
-- Pretrained TopoFormer model large. [Download](https://weilab.math.msu.edu/Downloads/TopoFormer/TopoFormer_s_pretrained_model.zip)
-- Pretrained TopoFormer model small. [Download](https://weilab.math.msu.edu/Downloads/TopoFormer/TopoFormer_pretrained_model.zip)
+- Pretrained TopoFormer model large. [Download](https://weilab.math.msu.edu/Downloads/mGLI-KDA/TopoFormer_s_pretrained_model.zip)
+- Pretrained TopoFormer model small. [Download](https://weilab.math.msu.edu/Downloads/mGLI-KDA/TopoFormer_pretrained_model.zip)
 
 #### Finetuned models and performances
 - Scoring
