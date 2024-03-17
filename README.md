@@ -135,7 +135,7 @@ python codes/mGLI-ligand.py --mol2_path datasets/PDBbind/2eg8/2eg8_ligand.mol2 -
 | PDBbind-v2013 [result](./Results)      |2959|2764  | 195 |0.866|1.561|
 | PDBbind-v2016 [result](./Results)      |4057|3767  | 290 |0.866|1.561|
 
-#### Modeling with mGLI-all & mGLI-lig-all features
+#### Modeling with mGLI-bin & mGLI-lig-all features
 
 |Datasets                                        | Training Set                  | Test Set| PCC | RMSE (kcal/mol) |
 |-------------------------------------------------|-------------                  |---------|-    |-                |
