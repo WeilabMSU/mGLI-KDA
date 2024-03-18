@@ -113,9 +113,10 @@ Example with the ligand in PDB 2eg8, generating mGLI features with "bin" manner 
 python codes/mGLI-ligand.py --mol2_path datasets/PDBbind/2eg8/2eg8_ligand.mol2 --mol2_id 2eg8 --bin_or_all bin --integral_type median
 ```
 ### IV. Generation of sequence-based features for protein or small molecules
-[Transformer Protein language model](https://github.com/facebookresearch/esm)
-[Transformer small molecule language model](https://github.com/WeilabMSU/PretrainModels)
-[Autoencoder small molecule language model](https://github.com/jrwnter/cddd)
+Sequence-based features were generated as protein embedding with [Transformer Protein language model](https://github.com/facebookresearch/esm).
+
+Sequence-based features were generated as small molecular embedding with
+[Transformer small molecule language model](https://github.com/WeilabMSU/PretrainModels), and [Autoencoder small molecule language model](https://github.com/jrwnter/cddd)
 
 ---
 
