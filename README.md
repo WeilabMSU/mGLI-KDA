@@ -44,7 +44,7 @@ In the past decade, topological data analysis (TDA) has emerged as a powerful al
 
 Schematic illustration of the overall mGLI-based knot data analysis (KDA) platform is shown in below.
 
-![Model Architecture](concepts.png)
+<img src="concepts.png" alt="Model Architecture" width="300" height="200">
 
 Further explain the details in the [paper](https://github.com/WeilabMSU/mGLI-KDA), providing context and additional information about the architecture and its components.
 
@@ -113,9 +113,9 @@ Example with the ligand in PDB 2eg8, generating mGLI features with "bin" manner 
 python codes/mGLI-ligand.py --mol2_path datasets/PDBbind/2eg8/2eg8_ligand.mol2 --mol2_id 2eg8 --bin_or_all bin --integral_type median
 ```
 ### IV. Generation of sequence-based features for protein or small molecules
-Sequence-based features were generated as protein embedding with [Transformer Protein language model](https://github.com/facebookresearch/esm).
+Protein sequence embeddings were generated with [Transformer Protein language model](https://github.com/facebookresearch/esm).
 
-Sequence-based features were generated as small molecular embedding with
+Small molecular sequence embeddings were generated with
 [Transformer small molecule language model](https://github.com/WeilabMSU/PretrainModels), and [Autoencoder small molecule language model](https://github.com/jrwnter/cddd)
 
 ---
