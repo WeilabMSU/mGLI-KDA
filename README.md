@@ -22,7 +22,7 @@
 - [Datasets](#datasets)
 - [Modeling with mGLI-based features](#Modeling-with-mGLI-based-features)
     - [mGLI-based B-factor prediction](#i-mgli-based-b-factor-prediction)
-    - [Generation of mGLI-based features for protein-ligand complex](II-Generation-of-mGLI-based-features-for-protein-ligand-complex)
+    - [Generation of mGLI-based features for protein-ligand complex](#II-Generation-of-mGLI-based-features-for-protein-ligand-complex)
     - [Generation of mGLI-based features for small molecule](#III-Generation-of-mGLI-based-features-for-small-molecule)
 - [Results](#results)
     - [I. Modeling the B-factor datasets]()
