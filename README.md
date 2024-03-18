@@ -130,30 +130,30 @@ python codes/mGLI-ligand.py --mol2_path datasets/PDBbind/2eg8/2eg8_ligand.mol2 -
 #### 1. Modeling with mGLI-all & mGLI-lig-all features
 |Datasets                                        | Training Set                  | Test Set| PCC | RMSE (kcal/mol) |
 |-------------------------------------------------|-------------                  |---------|-    |-                |
-| PDBbind-v2007 [result](./Results)      |1300 |1105  | 195 |0.866|1.561|
-| PDBbind-v2013 [result](./Results)      |2959|2764  | 195 |0.866|1.561|
-| PDBbind-v2016 [result](./Results)      |4057|3767  | 290 |0.866|1.561|
+| PDBbind-v2007 [result](./Results)      |1300 |1105  | 195 |0.834 |1.887|
+| PDBbind-v2013 [result](./Results)      |2959|2764  | 195 |0.790 |1.990|
+| PDBbind-v2016 [result](./Results)      |4057|3767  | 290 |0.838 |1.731|
 
 #### 2. Modeling with mGLI-bin & mGLI-lig-all features
 |Datasets                                        | Training Set                  | Test Set| PCC | RMSE (kcal/mol) |
 |-------------------------------------------------|-------------                  |---------|-    |-                |
-| PDBbind-v2007 [result](./Results)      |1300 |1105  | 195 |0.866|1.561|
-| PDBbind-v2013 [result](./Results)      |2959|2764  | 195 |0.866|1.561|
-| PDBbind-v2016 [result](./Results)      |4057|3767  | 290 |0.866|1.561|
+| PDBbind-v2007 [result](./Results)      |1300 |1105  | 195 |0.820 |1.987|
+| PDBbind-v2013 [result](./Results)      |2959|2764  | 195 |0.787 |2.029|
+| PDBbind-v2016 [result](./Results)      |4057|3767  | 290 |0.849 |1.722|
 
 #### 3. Modeling with \#{mGLI-all & mGLI-lig-all,TF} features
 |Datasets                                        | Training Set                  | Test Set| PCC | RMSE (kcal/mol) |
 |-------------------------------------------------|-------------                  |---------|-    |-                |
-| PDBbind-v2007 [result](./Results)      |1300 |1105  | 195 |0.866|1.561|
-| PDBbind-v2013 [result](./Results)      |2959|2764  | 195 |0.866|1.561|
-| PDBbind-v2016 [result](./Results)      |4057|3767  | 290 |0.866|1.561|
+| PDBbind-v2007 [result](./Results)      |1300 |1105  | 195 |0.835 |1.888|
+| PDBbind-v2013 [result](./Results)      |2959|2764  | 195 |0.819 |1.930|
+| PDBbind-v2016 [result](./Results)      |4057|3767  | 290 |0.857 |1.673|
 
 #### 4. Modeling with \#{mGLI-bin & mGLI-lig-all,TF} features
 |Datasets                                        | Training Set                  | Test Set| PCC | RMSE (kcal/mol) |
 |-------------------------------------------------|-------------                  |---------|-    |-                |
-| PDBbind-v2007 [result](./Results)      |1300 |1105  | 195 |0.866|1.561|
-| PDBbind-v2013 [result](./Results)      |2959|2764  | 195 |0.866|1.561|
-| PDBbind-v2016 [result](./Results)      |4057|3767  | 290 |0.866|1.561|
+| PDBbind-v2007 [result](./Results)      |1300 |1105  | 195 |0.831 |1.932|
+| PDBbind-v2013 [result](./Results)      |2959|2764  | 195 |0.819 | 1.948|
+| PDBbind-v2016 [result](./Results)      |4057|3767  | 290 |0.862 |1.671|
 
 
 Note, twenty gradient boosting regressor tree (GBRT) models were built for each dataset with distinct random seeds such that initialization-related errors can be addressed. The mGLI-based features and transformer-based features were paired with GBRT, respectively. The consensus predictions were obtained using predictions from the two types of models. The predictions can be found in the [results](./Results) folder. 
