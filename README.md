@@ -111,8 +111,11 @@ Example with the ligand in PDB 2eg8, generating mGLI features with "bin" manner 
 "all" can also be used,  output: 2eg8-ligand-median-bin.npy
 ```shell
 python codes/mGLI-ligand.py --mol2_path datasets/PDBbind/2eg8/2eg8_ligand.mol2 --mol2_id 2eg8 --bin_or_all bin --integral_type median
-
 ```
+### IV. Generation of sequence-based features for protein or small molecules
+[Transformer Protein language model](https://github.com/facebookresearch/esm)
+[Transformer small molecule language model](https://github.com/WeilabMSU/PretrainModels)
+[Autoencoder small molecule language model](https://github.com/jrwnter/cddd)
 
 ---
 
