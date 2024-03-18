@@ -21,9 +21,10 @@
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Datasets](#datasets)
-- [mGLI-based B-factor prediction](#mGLI-based-B-factor-prediction)
-- [Generation of mGLI-based features for protein-ligand complex](#Generation-of-mGLI-based-features-for-protein-ligand-complex)
-- [Generation of mGLI-based features for small molecule](#Generation-of-mGLI-based-features-for-small-molecule)
+- [Modeling with mGLI-based features](#Modeling-with-mGLI-based-features)
+    - [mGLI-based B-factor prediction](#mGLI-based-B-factor-prediction)
+    - [Generation of mGLI-based features for protein-ligand complex](#Generation-of-mGLI-based-features-for-protein-ligand-complex)
+    - [Generation of mGLI-based features for small molecule](#Generation-of-mGLI-based-features-for-small-molecule)
 - [Results](#results)
     - [Pretrained models]()
     - [Finetuned models and performances](#finetuned-models-and-performances)
@@ -93,7 +94,7 @@ A brief introduction about the benchmarks.
 ---
 
 ## Modeling with mGLI-based features
-### mGLI-based B-factor prediction
+### I. mGLI-based B-factor prediction
 
 ```shell
 # examples, dataset_name options: Set-364, largeset, mediumset, smallset
@@ -101,14 +102,14 @@ python codes/mGLI-B-factor.py --dataset_name Set-364
 ```
 
 
-### Generation of mGLI-based features for protein-ligand complex
+### II. Generation of mGLI-based features for protein-ligand complex
 Example with PDB 2eg8, generating mGLI features with "bin" manner and "median" statistics for atom-by-atom Gauss linking integral.
 "all" can also be used and "std" statistics is also available for atom-by-atom Gauss linking integral, output: 2eg8-complex-median-bin.npy
 ```shell
 python codes/mGLI-protein-ligand.py --pdbid 2eg8 --bin_or_all bin --integral_type median
 ```
 
-### Generation of mGLI-based features for small molecule
+### III. Generation of mGLI-based features for small molecule
 Example with the ligand in PDB 2eg8, generating mGLI features with "bin" manner and "median" statistics for atom-by-atom Gauss linking integral.
 "all" can also be used,  output: 2eg8-ligand-median-bin.npy
 ```shell
