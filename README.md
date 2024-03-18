@@ -127,7 +127,11 @@ python codes/mGLI-ligand.py --mol2_path datasets/PDBbind/2eg8/2eg8_ligand.mol2 -
 
 ## Results
 
-### For PDBbind datasets
+### Modeling the B-factor datasets
+|Models                                        | GNM                  | pfFRI| ASPH | opFRI| EH| mGLI|
+|PCC| 0.565| 0.626|0.65|0.673|0.698|0.762|
+
+### Modeling the PDBbind datasets
 
 #### 1. Modeling with \#{mGLI-all & mGLI-lig-all,TF} features
 |Datasets                                        | Training Set                  | Test Set| PCC | RMSE (kcal/mol) |
