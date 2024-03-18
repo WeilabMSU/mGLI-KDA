@@ -25,8 +25,8 @@
     - [Generation of mGLI-based features for protein-ligand complex](#Generation-of-mGLI-based-features-for-protein-ligand-complex)
     - [Generation of mGLI-based features for small molecule](#Generation-of-mGLI-based-features-for-small-molecule)
 - [Results](#results)
-    - [Pretrained models]()
-    - [Finetuned models and performances](#finetuned-models-and-performances)
+    - [I. Modeling the B-factor datasets]()
+    - [II. Modeling the PDBbind datasets]()
 - [License](#license)
 - [Citation](#citation)
 
