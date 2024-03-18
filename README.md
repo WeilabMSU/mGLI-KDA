@@ -81,7 +81,7 @@ A brief introduction about the benchmarks.
 | LC50       |823 [Data](https://weilab.math.msu.edu/Downloads/toxicity_data.zip)|659 
 | LC50DM       |353 [Data](https://weilab.math.msu.edu/Downloads/mGLI-KDA/toxicity_data.zip)|283                          | 70 
 | LD50       |7413 [Data](https://weilab.math.msu.edu/Downloads/mGLI-KDA/toxicity_data.zip)                        |5931  | 1482 
-| Zhang data       |1334 [Data](https://weilab.math.msu.edu/Downloads/mGLI-KDA/hERG-data.zip)|927                          | 407 
+| Zhang data       |1334 [Data](https://weilab.math.msu.edu/Downloads/mGLI-KDA/hERG-data.zip)|927                          | 236
 | Li data       |4813 [Data](https://weilab.math.msu.edu/Downloads/mGLI-KDA/hERG-data.zip)|3721                          | 1092 
 | Cai data       |4447 [Data](https://weilab.math.msu.edu/Downloads/mGLI-KDA/hERG-data.zip)|3954                          | 493 
 
@@ -109,8 +109,7 @@ python codes/mGLI-protein-ligand.py --pdbid 2eg8 --bin_or_all bin --integral_typ
 ```
 
 ### III. Generation of mGLI-based features for small molecule
-Example with the ligand in PDB 2eg8, generating mGLI features with "bin" manner and "median" statistics for atom-by-atom Gauss linking integral.
-"all" can also be used,  output: 2eg8-ligand-median-bin.npy
+Example with the ligand in protein complex PDB 2eg8, generating mGLI features with "bin" manner and "median" statistics for atom-by-atom Gauss linking integral. Statistics of "all" can also be used.  output: 2eg8-ligand-median-bin.npy
 ```shell
 python codes/mGLI-ligand.py --mol2_path datasets/PDBbind/2eg8/2eg8_ligand.mol2 --mol2_id 2eg8 --bin_or_all bin --integral_type median
 ```
