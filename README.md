@@ -64,13 +64,6 @@ Further explain the details in the [paper](https://github.com/WeilabMSU/mGLI-KDA
 - scikit-learn              1.0.2
 - python                    3.10.12
 - biopandas                 0.4.1
-
-### Installation
-
-```
-git clone https://github.com/WeilabMSU/TopoFormer.git
-```
-
 ---
 
 ## Datasets
