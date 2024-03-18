@@ -158,7 +158,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Li Shen, Hongsong Feng, Fengling Li, Fengchun Lei, Jie Wu, and Guo-Wei Wei, "Knot data analysis using multiscale Gauss link integral"
 
 ---
-
-## Acknowledgements
-
-This project has benefited from the use of the [Transformers](https://github.com/huggingface/transformers) library. Portions of the code in this project have been modified from the original code found in the Transformers repository.
