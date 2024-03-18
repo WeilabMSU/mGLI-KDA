@@ -18,7 +18,6 @@
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Model Architecture](#model-architecture)
-- [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Datasets](#datasets)
 - [Modeling with mGLI-based features](#Modeling-with-mGLI-based-features)
@@ -51,9 +50,7 @@ Further explain the details in the [paper](https://github.com/WeilabMSU/mGLI-KDA
 
 ---
 
-## Getting Started
-
-### Prerequisites
+## Prerequisites
 
 - numpy                     1.21.0
 - scipy                     1.7.3
