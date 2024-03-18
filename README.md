@@ -15,22 +15,20 @@
 
 ## Table of Contents
 
-- [TopoFormer](#topoformer)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Model Architecture](#model-architecture)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-  - [Datasets](#datasets)
-  - [Preparing Topologial Sequence](#preparing-topologial-sequence)
-  - [Fine-Tuning Procedure for Customized Data](#fine-tuning-procedure-for-customized-data)
-  - [Results](#results)
-      - [Pretrained models](#pretrained-models)
-      - [Finetuned models and performances](#finetuned-models-and-performances)
-  - [License](#license)
-  - [Citation](#citation)
-  - [Acknowledgements](#acknowledgements)
+- [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Model Architecture](#model-architecture)
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Datasets](#datasets)
+- [mGLI-based B-factor prediction](#mGLI-based-B-factor-prediction)
+- [Generation of mGLI-based features for protein-ligand complex](#Generation-of-mGLI-based-features-for-protein-ligand-complex)
+- [Generation of mGLI-based features for small molecule](#Generation-of-mGLI-based-features-for-small-molecule)
+- [Results](#results)
+    - [Pretrained models]()
+    - [Finetuned models and performances](#finetuned-models-and-performances)
+- [License](#license)
+- [Citation](#citation)
 
 ---
 
