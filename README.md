@@ -133,7 +133,7 @@ Small molecular sequence embeddings were generated with
 ## Results
 
 ### I. Modeling the Set-364 b-factor dataset
-| Models       | GNM [result](./Results)  | pfFRI [result](./Results)| ASPH | opFRI [result](./Results)| EH   | mGLI [result](./Results)|
+| Models       | [GNM](https://dyn.life.nthu.edu.tw/oGNM/oGNM.php) [result](./Results)  | pfFRI [result](./Results)| ASPH | opFRI [result](./Results)| EH   | mGLI [result](./Results)|
 |--------------|-------|-------|------|-------|------|------|
 | PCC          | 0.565 | 0.626 | 0.65 | 0.673 | 0.698| 0.762|
 
