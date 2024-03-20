@@ -87,7 +87,7 @@ A brief introduction about the benchmarks.
 | PDBbind-v2013       |2959|2764  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                        | 195 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                         |
 | PDBbind-v2016       |4057|3767  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                        | 290 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                         |
 | IGC50       |1792 [Data](https://weilab.math.msu.edu/Downloads/toxicity_data.zip)|1434                          | 358 |
-| LC50       |823 [Data](https://weilab.math.msu.edu/Downloads/toxicity_data.zip)|659 
+| LC50       |823 [Data](https://weilab.math.msu.edu/Downloads/toxicity_data.zip)|659 |164
 | LC50DM       |353 [Data](https://weilab.math.msu.edu/Downloads/mGLI-KDA/toxicity_data.zip)|283                          | 70 
 | LD50       |7413 [Data](https://weilab.math.msu.edu/Downloads/mGLI-KDA/toxicity_data.zip)                        |5931  | 1482 
 | Zhang data       |1163 [Data](https://weilab.math.msu.edu/Downloads/mGLI-KDA/hERG-data.zip)|927                          | 236
