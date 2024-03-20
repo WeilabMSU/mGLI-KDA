@@ -71,6 +71,8 @@ Further explain the details in the [paper](https://github.com/WeilabMSU/mGLI-KDA
 
 - [pyknotid](https://github.com/SPOCKnots/pyknotid)
 
+- pymol
+
 --- 
 
 ## Datasets
