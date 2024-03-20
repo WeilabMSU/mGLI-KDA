@@ -69,7 +69,7 @@ Further explain the details in the [paper](https://github.com/WeilabMSU/mGLI-KDA
 
 - vispy 0.12.1
 
-- pyknotid 0.5.4 [pyknotid](https://github.com/SPOCKnots/pyknotid)
+- [pyknotid](https://github.com/SPOCKnots/pyknotid)
 
 --- 
 
