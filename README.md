@@ -81,7 +81,7 @@ A brief introduction about the benchmarks.
 
 | Datasets                |Total    | Training Set                 | Test Set                                             |
 |-|-----------------------------|------------------------------|------------------------------                        |
-| Set-364 | 364       |   -    |      -                                                            |
+| Set-364 | 364  [Data](https://weilab.math.msu.edu/Downloads/mGLI-KDA/Set-364.zip)     |   -    |      -                                                            |
 | B-factor (small) | 30       |   -    |      -                                                            |
 | B-factor (medium) | 36       |   -    |      -                                                            |
 | B-factor (large) | 34       |   -    |      -                                                            |
