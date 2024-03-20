@@ -41,7 +41,7 @@ def b_factor_analysis(pdbid, datapath):
     y = np.array(labels)
 
     X_norm = normalize_feature(X)
-    print("feature generated")
+    print("feature generated for ", pdbid)
 
     model = LinearRegression()
     r = 27
