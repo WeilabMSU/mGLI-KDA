@@ -81,10 +81,10 @@ A brief introduction about the benchmarks.
 
 | Datasets                |Total    | Training Set                 | Test Set                                             |
 |-|-----------------------------|------------------------------|------------------------------                        |
-| Set-364 | 364  [Data](./datasets)     |   -    |      -                                                            |
-| B-factor (small) | 30       |   -    |      -                                                            |
-| B-factor (medium) | 36       |   -    |      -                                                            |
-| B-factor (large) | 34       |   -    |      -                                                            |
+| Bfactor-Set364 | 364  [Data](./datasets)     |   -    |      -                                                            |
+| Bfactor-small | 30     [Data](./datasets)  |   -    |      -                                                            |
+| Bfactor-medium | 36    [Data](./datasets)  |   -    |      -                                                            |
+| Bfactor-large | 34   [Data](./datasets)    |   -    |      -                                                            |
 | PDBbind-v2007       |1300 |1105  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                        | 195 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                         |
 | PDBbind-v2013       |2959|2764  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                        | 195 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                         |
 | PDBbind-v2016       |4057|3767  [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                        | 290 [Label](https://weilab.math.msu.edu/Downloads/mGLI-KDA/PDBbind.zip)                         |
