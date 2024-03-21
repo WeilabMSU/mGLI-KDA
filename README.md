@@ -19,6 +19,7 @@
 - [Introduction](#introduction)
 - [Model Architecture](#model-architecture)
 - [Prerequisites](#prerequisites)
+- [Visualization tools](#Visualization-tools)
 - [Datasets](#datasets)
 - [Modeling with mGLI-based features](#Modeling-with-mGLI-based-features)
     - [mGLI-based B-factor prediction](#i-mgli-based-b-factor-prediction)
