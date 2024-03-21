@@ -41,7 +41,7 @@ def b_factor_analysis(pdbid, datapath):
     y = np.array(labels)
 
     X_norm = normalize_feature(X)
-    print("feature generated for ", pdbid)
+    print("mGLI feature generated for ", pdbid)
 
     model = LinearRegression()
     r = 27
@@ -60,18 +60,19 @@ def cli_main():
 
     args = parser.parse_args()
 
-    datapath = f"./datasets/{args.dataset_name}/{args.dataset_name}.csv"
-    df = pd.read_csv(datapath, header=0)
+    dataset_path = f"./datasets/{args.dataset_name}"
+    df = pd.read_csv(f"{dataset_path}/{args.dataset_name}.csv", header=0)
     PDBIDs = df["PDBID"]
     pvalues = []
     for pdbid in PDBIDs:
         print(pdbid)
-        pvalue = b_factor_analysis(pdbid, datapath)
+        pvalue = b_factor_analysis(pdbid, f"{dataset_path}/PDBs")
         pvalues.append(pvalue)
 
-    if not os.path.exists("results"):
-        os.mkdir("results")
-    fw = open(f"results/results-{args.dataset_name}.csv", "w")
+    if not os.path.exists("results-Bfactor"):
+        os.mkdir("results-Bfactor")
+    fw = open(f"results-Bfactor/results-{args.dataset_name}.csv", "w")
+    print("PDB,PCC", file=fw)
     for pdbid, pvalues in zip(PDBIDs, pvalues):
         print(f"{pdbid},{pvalues:.3f}", file=fw)
     fw.close()
