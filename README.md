@@ -108,7 +108,7 @@ A brief introduction about the benchmarks.
 
 ```shell
 # examples, dataset_name options: Bfactor-Set364, Bfactor-large, Bfactor-medium, Bfactor-small
-python codes/mGLI-Bfactor.py --dataset_name Bfactor-Set364
+python codes/mGLI-Bfactor.py --dataset_name Bfactor-small
 ```
 
 

@@ -55,13 +55,13 @@ def cli_main():
         "--dataset_name",
         type=str,
         default="Set-364",
-        help="choose one of the three datasets including Set-364, largeset, mediumset, smallset",
+        help="choose one of the three datasets including Bfactor-Set364, Bfactor-large, Bfactor-medium, Bfactor-small",
     )
 
     args = parser.parse_args()
 
-    datapath = f"./datasets/Set-364"
-    df = pd.read_csv(f"{datapath}/{args.dataset_name}.csv", header=0)
+    datapath = f"./datasets/{args.dataset_name}/{args.dataset_name}.csv"
+    df = pd.read_csv(datapath, header=0)
     PDBIDs = df["PDBID"]
     pvalues = []
     for pdbid in PDBIDs:
