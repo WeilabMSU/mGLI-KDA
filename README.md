@@ -107,8 +107,8 @@ A brief introduction about the benchmarks.
 ### I. mGLI-based B-factor prediction
 
 ```shell
-# examples, dataset_name options: Set-364, largeset, mediumset, smallset
-python codes/mGLI-B-factor.py --dataset_name Set-364 
+# examples, dataset_name options: Bfactor-Set364, Bfactor-large, Bfactor-medium, Bfactor-small
+python codes/mGLI-Bfactor.py --dataset_name Bfactor-Set364
 ```
 
 
