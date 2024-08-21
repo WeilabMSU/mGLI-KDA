@@ -154,9 +154,9 @@ Small molecular sequence embeddings were generated with
 #### 2. Modeling with \#{mGLI-bin & mGLI-lig-all,TF} features
 |Datasets                                        | Training Set                  | Test Set| PCC | RMSE (kcal/mol) |
 |-------------------------------------------------|-------------                  |---------|-    |-                |
-| PDBbind-v2007 [result](./Results)      |1300 |1105  | 0.831 |1.932|
-| PDBbind-v2013 [result](./Results)      |2959|2764  | **0.819** | 1.948|
-| PDBbind-v2016 [result](./Results)      |4057|3767  | **0.862** |1.671|
+| PDBbind-v2007 [result](./Results)      |1105| 195  | 0.831 |1.932|
+| PDBbind-v2013 [result](./Results)      |2764| 195  | **0.819** | 1.948|
+| PDBbind-v2016 [result](./Results)      |3767| 290  | **0.862** |1.671|
 
 
 Note, twenty gradient boosting regressor tree (GBRT) models were built for each dataset with distinct random seeds such that initialization-related errors can be addressed. The mGLI-based features and transformer-based features were paired with GBRT, respectively. The consensus predictions (\#{mGLI-all & mGLI-lig-all,TF} or \#{mGLI-bin & mGLI-lig-all,TF}) were obtained using predictions from the two types of models. The predictions can be found in the [results](./Results) folder. 
